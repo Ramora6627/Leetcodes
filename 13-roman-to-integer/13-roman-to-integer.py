@@ -20,7 +20,7 @@ class Solution:
 #         Solution 2:
         d = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
         nums = list(map(lambda x:d[x],s))
-        print(nums)
+
         ans, carry = 0, 0
 
         for num in nums:
