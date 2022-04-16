@@ -8,4 +8,5 @@ class Solution:
                 i = i
             else:
                 i += 1
-        return len(nums[:len(nums)-nums.count("N")])
+        x = {"N"}
+        return len(set(nums).difference(x))
