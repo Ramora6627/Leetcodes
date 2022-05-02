@@ -1,12 +1,13 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        for char in s:
-            if s.count(char) == 1:
+        
+#         for char in s:
+#             if s.count(char) == 1:
                 
-                return s.index(char)
-                break
+#                 return s.index(char)
+#                 break
           
-        return -1
+#         return -1
 #         count = collections.Counter(s)
         
 #         print(count)
@@ -15,3 +16,8 @@ class Solution:
 #             if(count[char] == 1):
 #                 return s.find(char)
 #         return -1
+          count = collections.Counter(s)
+          for char in count:
+            if count[char] == 1:
+                return s.find(char)
+          return -1
