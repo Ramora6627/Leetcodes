@@ -19,5 +19,5 @@ class Solution:
           count = collections.Counter(s)
           for char in count:
             if count[char] == 1:
-                return s.find(char)
+                return s.index(char)
           return -1
