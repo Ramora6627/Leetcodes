@@ -12,6 +12,8 @@ class Solution(object):
                 
 #         return True
 
-        target.sort()
-        arr.sort()
-        return target == arr 
+        # target.sort()
+        # arr.sort()
+        # return target == arr 
+    
+        return collections.Counter(target) == collections.Counter(arr)
