@@ -6,9 +6,8 @@ class Solution(object):
         :rtype: bool
         """
         for num in  arr:
-            if not num in target:
+            if not num in target or arr.count(num) > target.count(num):
                 return False
                 break
-            elif arr.count(num) > target.count(num):
-                return False
+                
         return True
