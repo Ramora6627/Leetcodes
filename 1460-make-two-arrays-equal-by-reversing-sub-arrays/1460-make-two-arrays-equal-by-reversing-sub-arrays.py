@@ -5,9 +5,13 @@ class Solution(object):
         :type arr: List[int]
         :rtype: bool
         """
-        for num in  arr:
-            if not num in target or arr.count(num) > target.count(num):
-                return False
-                break
+        # for num in  arr:
+#             if not num in target or arr.count(num) > target.count(num):
+#                 return False
+#                 break
                 
-        return True
+#         return True
+
+        target.sort()
+        arr.sort()
+        return target == arr 
