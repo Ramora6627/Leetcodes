@@ -1,18 +1,20 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        output = {}
-        pairs = []
+#         output = {}
+#         pairs = []
         
-        for st in strs:
-            k = sorted(st)
-            k =  ''.join(k)
-            print(k)
-            if k in output: 
+#         for st in strs:
+#             k = sorted(st)
+#             k =  ''.join(k)
+#             print(k)
+#             if k in output: 
                 
-                output[k].append(st)
-            else:
-                output[k] = [st]
-        return output.values()
+#                 output[k].append(st)
+#             else:
+#                 output[k] = [st]
+#         return output.values()
+
+
 #         hashtable = {}
 #         output = []
 #         for st in strs:
@@ -48,3 +50,23 @@ class Solution:
 #             new += st
 #             hashtable[st] -= 1
 #     return len(new) == len(s)
+
+
+        ans = collections.defaultdict(list)
+
+        for s in strs:
+            count = [0] * 26
+            # print(count)
+            for c in s:
+                # print(ord(c), ord("a"))
+                count[ord(c) - ord("a")] += 1
+                # print(count)
+            k = tuple(count)
+            if k in ans:
+              ans[k].append(s)
+            else:
+              ans[k] = [s]
+        return ans.values()
+
+    # strs = ["tea","ate","nat","bat"]
+    # print(groupAnagrams(strs))
