@@ -4,7 +4,7 @@ class Solution:
         answer = []
         for num in set(nums):
             hashtable[num] = nums.count(num)
-        print(hashtable)           
+        # print(hashtable)           
         for num in nums:
             p = 1
             hashtable[num] -= 1
