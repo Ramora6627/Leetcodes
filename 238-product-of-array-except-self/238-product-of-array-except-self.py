@@ -2,8 +2,8 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         hashtable = {}
         answer = []
-        for num in set(nums):
-            hashtable[num] = nums.count(num)
+        for num in nums:
+            hashtable[num] = 1 + hashtable.get(num, 0)
         # print(hashtable)           
         for num in nums:
             p = 1
