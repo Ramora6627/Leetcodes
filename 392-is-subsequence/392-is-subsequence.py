@@ -12,12 +12,10 @@ class Solution:
                     output.append(lst.index(s[i]))
                     lst[lst.index(s[i])] ="-"
             elif s[i] in lst[output[-1]:]:
-                print(output[-1:])
+                # print(output[-1:])
                 output.append(lst[output[-1]:].index(s[i])+output[-1])
                 lst[lst.index(s[i])] ="-"
 
-                # print(lst)
-        print(output,sorted(output))
         if len(output) == len(s) and sorted(output) == output:
             return True
         return False
