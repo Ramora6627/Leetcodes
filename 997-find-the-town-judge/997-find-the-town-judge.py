@@ -13,15 +13,11 @@ class Solution:
         
         for key,value in candidate.items():
             candidate[key] = set(value)
-        print (candidate)
         
         if set.intersection(*candidate.values()):
             common = set.intersection(*candidate.values())
             u = set.union(*candidate.values())
-            print (common)
-            print(u)
             a = list(common)[0]
-            print (u.remove(a))
             if len(common)==1 and a not in candidate and len(candidate.keys()) == n-1:
                         return a
 
