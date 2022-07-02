@@ -7,10 +7,9 @@ class Solution:
         for pair in trust:
             if pair[1] not in hashtable:
                 hashtable[pair[1]] = [pair[0]]
-                a.add(pair[0])
             else:
                 hashtable[pair[1]].append(pair[0])
-                a.add(pair[0])
+            a.add(pair[0])
 
         print (hashtable,a)
         town = []
