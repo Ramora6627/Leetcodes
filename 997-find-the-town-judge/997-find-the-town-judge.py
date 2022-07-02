@@ -17,8 +17,9 @@ class Solution:
         if set.intersection(*candidate.values()):
             common = set.intersection(*candidate.values())
             u = set.union(*candidate.values())
-            if len(common)==1 and list(common)[0] not in candidate and len(candidate.keys()) == n-1:
-                        return list(common)[0]
+            a = list(common)[0]
+            if len(common)==1 and a not in candidate and len(candidate.keys()) == n-1:
+                        return a
 
         return -1
         
