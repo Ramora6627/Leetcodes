@@ -11,7 +11,6 @@ class Solution:
                 hashtable[pair[1]].append(pair[0])
             a.add(pair[0])
 
-        print (hashtable,a)
         town = []
         for key,value in hashtable.items():
             if len(value) == n-1 and key not in a:
