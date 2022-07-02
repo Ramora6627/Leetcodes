@@ -4,10 +4,10 @@ class Solution:
         j = 0
         output = []
         while i < len(nums) :
-            print (i,j)
+            # print (i,j)
             while  j < len(nums)-1 and nums[j+1] == nums[j] + 1 :
                 j += 1
-                print(j)
+                # print(j)
             if i == j: 
                 output.append(str(nums[i]))
                 i += 1
