@@ -8,7 +8,7 @@ class Solution:
                     output += char
                     space += 1
                 elif space<k:
-                    print (char,space)
+                    # print (char,space)
                     output += char
             if space==k-1:
                 break
