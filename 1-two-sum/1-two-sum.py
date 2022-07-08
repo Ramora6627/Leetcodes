@@ -5,7 +5,7 @@ class Solution:
             if nums[i] in hashtable:
                 return [hashtable[nums[i]],i]
             hashtable[target-nums[i]] = i
-        
+            # print(hashtable)
         # return output
         
         
