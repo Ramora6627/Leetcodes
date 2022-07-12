@@ -9,14 +9,14 @@ class Solution:
                 res = ""
                 if haystack[i] == needle[0]:
                     ind = i
-                    print(ind)
+                    # print(ind)
                     j = 0
                     k = i 
                     while j<len(needle) and haystack[k] == needle[j]:
                         res += haystack[k]
                         k += 1
                         j += 1
-                    print(res)
+                    # print(res)
                     if len(res) == len(needle):
                         return ind
         return -1
