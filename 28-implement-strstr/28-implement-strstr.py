@@ -1,27 +1,24 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        res = ""
-        if not needle:
-            return 0
+        
+        
+        
         if needle in haystack:
-            for j in range(len(haystack)):
-                if haystack[j] == needle[0]:
-                    i = 1
-                    index = j
-                    res += needle[0]
-                    while i < len(needle) and haystack[j+i]==needle[i]:
-                        
-                        res += haystack[j+i]
-                        # print(i)
-                        i += 1
-                    # print(res)
-                    if res != needle:
-                        res = ""
-                    else:
-                        return index
-
-                    
-
+            
+            for i in range(len(haystack)):
+                res = ""
+                if haystack[i] == needle[0]:
+                    ind = i
+                    print(ind)
+                    j = 0
+                    k = i 
+                    while j<len(needle) and haystack[k] == needle[j]:
+                        res += haystack[k]
+                        k += 1
+                        j += 1
+                    print(res)
+                    if len(res) == len(needle):
+                        return ind
         return -1
-                
+                    
         
