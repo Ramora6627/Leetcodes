@@ -8,7 +8,6 @@ class Solution:
                 res.add(s[j]) 
                 j += 1
             # print(i,j,res,curr)
-            if len(res)>curr:
-                curr = len(res)
+            curr = max(curr,j-i)
             res.clear()
         return curr
