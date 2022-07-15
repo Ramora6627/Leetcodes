@@ -10,5 +10,5 @@ class Solution:
             # print(i,j,res,curr)
             if len(res)>curr:
                 curr = len(res)
-            res= set()
+            res.clear()
         return curr
